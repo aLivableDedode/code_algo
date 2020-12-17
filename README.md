@@ -24,7 +24,22 @@
  *   >>> tip: 注意「子序列」和「子串」这两个名词的区别，子串一定是连续的，而子序列不一定是连续的
  */
 ```
+ - [dpTable模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq.java)
+ - [二分查找模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq4BinarySearch.java)
+ - [变种问题1: 俄罗斯套娃/信封问题](algo_dynamic_pro/src/main/java/mostincrsubseq/EnvelopeProblem.java):这个其实是将原来的一维问题变成二维问题,当然也可以变成三维问题（套箱子）
+ - [进阶问题:最大子序和](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseqSum.java) 在得到最大自序的基础上，并将这种情况列出来
+ 
+ #### [4.最长公共子序列](algo_dynamic_pro/src/main/java/mostcommsubseq) 
+ ```python
+    最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
+    因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路
+ ```
+ 
+  #### [5.背包类型问题]
+  #### [6.贪心类型问题]
+  #### [7.其他经典问题]
 
+ 
 # [algo_backtracking 回溯算法](algo_backtracking)
 
 ####[1.全排列任意数据](algo_backtracking/src/main/java/fullarray/FullArrayMode.java)
