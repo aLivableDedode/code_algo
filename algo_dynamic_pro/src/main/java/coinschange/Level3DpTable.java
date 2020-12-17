@@ -19,15 +19,12 @@ public class Level3DpTable {
             for (int coin : coinskind) {
                 // 排除
                 if (i - coin < 0) continue;
-
                 // 选择
                 int res = Math.min(dpTree.get(i),1 + dpTree.get(i - coin));
                 dpTree.put(i,res);
             }
         }
-
         System.out.println(dpTree);
-
     }
 
     public static TreeMap<Integer,Integer> constructTreeMap(int capacity){

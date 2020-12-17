@@ -12,10 +12,18 @@
     给 k 种⾯值的硬币，⾯值分别为 c1, c2 ... ck ，每种硬
     币的数量⽆限，再给⼀个总⾦额 amount ，问你最少需要⼏枚硬币凑出这个
     ⾦额，如果不可能凑出，算法返回 -1
- - [暴力穷求](algo_dynamic_pro/src/main/java/coinschange/Levle1CoinsRecursive.java)
+ - [暴力穷求](algo_dynamic_pro/src/main/java/coinschange/Level1CoinsRecursive.java)
  - [通过备忘录模式](algo_dynamic_pro/src/main/java/coinschange/Level2AideMemoire.java)
- - [dpTabel模式自下而上]
+ - [dpTabel模式自下而上](algo_dynamic_pro/src/main/java/coinschange/Level3DpTable.java):将用一个数组记录每一个
+        子目标金额的最优结果，然后逐渐累加拼接成最终的金额对应到最优结果
 
+#### [3.最长递增子序列长度](algo_dynamic_pro/src/main/java/mostincrsubseq) 
+```java
+/**
+ *  给定一个无序的整数数组,找到其中最长的递增子序列的长度
+ *   >>> tip: 注意「子序列」和「子串」这两个名词的区别，子串一定是连续的，而子序列不一定是连续的
+ */
+```
 
 # [algo_backtracking 回溯算法](algo_backtracking)
 
@@ -32,3 +40,6 @@ for 选择 in 选择列表：
 
     
 ```
+####[2.N皇后问题]()
+
+# [algo_data_structure 数据结构](algo_data_structure)

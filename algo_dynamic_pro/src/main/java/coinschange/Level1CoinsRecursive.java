@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *  零钱问题利用递归穷举
  */
-public class Levle1CoinsRecursive {
+public class Level1CoinsRecursive {
 
     public static int[] coinskind = new int[]{1,2,3,5};
     public static void main(String[] args) {
