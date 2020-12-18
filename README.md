@@ -17,7 +17,7 @@
  - [dpTabel模式自下而上](algo_dynamic_pro/src/main/java/coinschange/Level3DpTable.java):将用一个数组记录每一个
         子目标金额的最优结果，然后逐渐累加拼接成最终的金额对应到最优结果
 
-#### [3.最长递增子序列长度](algo_dynamic_pro/src/main/java/mostincrsubseq) 
+#### [3.最长递增子序列长度 LIS](algo_dynamic_pro/src/main/java/mostincrsubseq) 
 ```java
 /**
  *  给定一个无序的整数数组,找到其中最长的递增子序列的长度
@@ -26,18 +26,23 @@
 ```
  - [dpTable模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq.java)
  - [二分查找模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq4BinarySearch.java)
- - [变种问题1: 俄罗斯套娃/信封问题](algo_dynamic_pro/src/main/java/mostincrsubseq/EnvelopeProblem.java):这个其实是将原来的一维问题变成二维问题,当然也可以变成三维问题（套箱子）
  - [进阶问题:最大子序和](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseqSum.java) 在得到最大自序的基础上，并将这种情况列出来
+ - [变种问题: 俄罗斯套娃/信封问题](algo_dynamic_pro/src/main/java/mostincrsubseq/EnvelopeProblem.java):这个其实是将原来的一维问题变成二维问题,当然也可以变成三维问题（套箱子）
  
- #### [4.最长公共子序列](algo_dynamic_pro/src/main/java/mostcommsubseq) 
+ #### [4.最大子数组和](algo_dynamic_pro/src/main/java/maxsubarraysum/MaximumSubArraySum.java) 
+```
+    给定一个整数数组nums,找到一个具有最大和的连续子数组(至少一个元素),返回其和
+```
+ 
+ #### [最长公共子序列](algo_dynamic_pro/src/main/java/mostcommsubseq) 
  ```python
     最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
     因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路
  ```
  
-  #### [5.背包类型问题]
-  #### [6.贪心类型问题]
-  #### [7.其他经典问题]
+  #### [背包类型问题]
+  #### [贪心类型问题]
+  #### [其他经典问题]
 
  
 # [algo_backtracking 回溯算法](algo_backtracking)
