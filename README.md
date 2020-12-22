@@ -29,12 +29,12 @@
  - [进阶问题:最大子序和](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseqSum.java) 在得到最大自序的基础上，并将这种情况列出来
  - [变种问题: 俄罗斯套娃/信封问题](algo_dynamic_pro/src/main/java/mostincrsubseq/EnvelopeProblem.java):这个其实是将原来的一维问题变成二维问题,当然也可以变成三维问题（套箱子）
  
- #### [4.最大子数组和](algo_dynamic_pro/src/main/java/maxsubarraysum/MaximumSubArraySum.java) 
+ ##### [3.1 最大子数组和](algo_dynamic_pro/src/main/java/maxsubarraysum/MaximumSubArraySum.java) 
 ```
     给定一个整数数组nums,找到一个具有最大和的连续子数组(至少一个元素),返回其和
 ```
  
- #### [最长公共子序列](algo_dynamic_pro/src/main/java/mostcommsubseq) 
+ ##### [3.2 最长公共子序列LCS](algo_dynamic_pro/src/main/java/mostcommsubseq) 
  ```python
     最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
     因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路

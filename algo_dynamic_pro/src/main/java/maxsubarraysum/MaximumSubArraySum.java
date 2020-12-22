@@ -5,7 +5,8 @@ import java.util.Arrays;
 /**
  *  动态规划套路：最大子数组和
  *  给定一个整数数组nums,找到一个具有最大和的连续子数组(至少一个元素),返回其和
- *   定义dp数组：第i个元素之前的最大连续子数组
+ *   定义dp数组：第i个元素之前的最大连续子数组的和
+ *      每次比较dp[i] 和 (nums[i] + dp[i-1]) 之间的大小
  */
 public class MaximumSubArraySum {
 
@@ -59,7 +60,6 @@ public class MaximumSubArraySum {
             res = Math.max(res,curr);
         }
 
-        System.out.println(" dpTable :"+ Arrays.stream(dp).mapToObj(x->String.valueOf(x)).reduce((x, y)->x+"_"+y).get());
         return res;
     }
 }
