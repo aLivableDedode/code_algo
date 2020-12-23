@@ -34,11 +34,23 @@
     给定一个整数数组nums,找到一个具有最大和的连续子数组(至少一个元素),返回其和
 ```
  
- ##### [3.2 最长公共子序列LCS](algo_dynamic_pro/src/main/java/mostcommsubseq) 
+ ##### [3.2 最长公共子序列LCS](algo_dynamic_pro/src/main/java/mostcommsubseq/MostCommSubSeq.java) 
  ```python
     最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
     因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路
+    
+    相比较而言就是上面斐波那契数列解题思路的扩展，由一维数组变成二维数组
  ```
+ -[变种问题:字符串的删除操作](algo_dynamic_pro/src/main/java/mostcommsubseq/LCSMinDistance.java)
+    
+    给定两个单词s1和s2，找到使得s1和s2相同所需的最小步数，
+    每一步可以删除任意一个字符串中的一个字符
+    --> 基本就是找最长公共子序列，然后根据原始字符长度减去公共子序长度值
+ 
+ -[变种问题:最小 ASCII 删除和](algo_dynamic_pro/src/main/java/mostcommsubseq/LCSMinDeleteASCIISum.java)
+
+     给定两个单词s1和s2，找到使两个字符串相等所需要删除字符的ASCII值的最小和
+     --> 基本就是找最长公共子序列，不过要改下原来的代码
  
   #### [背包类型问题]
   #### [贪心类型问题]
