@@ -53,7 +53,7 @@
      --> 基本就是找最长公共子序列，不过要改下原来的代码
  
   #### [4.背包类型问题](algo_dynamic_pro/src/main/java/backpackproblem)
-   - [4.1 0-1 背包问题]()
+   - [4.1 0-1 背包问题](algo_dynamic_pro/src/main/java/backpackproblem/BackPack01.java)
 
     给你一个可装载重量为W的背包和N个物品，每个物品有重量和价值两个属性。
     其中第i个物品的重量为wt[i]，价值为val[i]，现在让你用这个背包装物品，最多能装的价值是多少？
@@ -66,7 +66,10 @@
     想比较凑零钱问题，这2个类型很相似, 只不过这里在比较的时候不是 dp[i - 1] + 1 而是
     转换成价值的val数组的具体比较
     
-  
+  - [4.2 分割等和子集](algo_dynamic_pro/src/main/java/backpackproblem/SplitEqualSubSet.java)
+ ```java
+    给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+```  
   #### [贪心类型问题]
   #### [其他经典问题]
 
