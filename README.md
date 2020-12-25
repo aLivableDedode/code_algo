@@ -69,6 +69,9 @@
   - [4.2 分割等和子集](algo_dynamic_pro/src/main/java/backpackproblem/SplitEqualSubSet.java)
  ```java
     给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+
+    定义dp数组：dp[i][j] = x表示，对于前i个物品，当前背包的容量为j时，若x为true，
+    则说明可以恰好将背包装满，若x为false，则说明不能恰好将背包装满。
 ```  
   #### [贪心类型问题]
   #### [其他经典问题]
