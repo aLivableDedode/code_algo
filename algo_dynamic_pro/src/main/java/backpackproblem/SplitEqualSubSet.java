@@ -70,7 +70,7 @@ public class SplitEqualSubSet {
             tp = dp[j][w] | tp;
 
         }
-        System.out.println(tp);
+        System.out.println(dp[4][11]);
     }
 
     public static void equalSubSetV2(){

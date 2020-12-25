@@ -18,7 +18,7 @@
         子目标金额的最优结果，然后逐渐累加拼接成最终的金额对应到最优结果
 
 #### [3.最长递增子序列长度 LIS](algo_dynamic_pro/src/main/java/mostincrsubseq) 
-```java
+```python
 /**
  *  给定一个无序的整数数组,找到其中最长的递增子序列的长度
  *   >>> tip: 注意「子序列」和「子串」这两个名词的区别，子串一定是连续的，而子序列不一定是连续的
@@ -67,13 +67,37 @@
     转换成价值的val数组的具体比较
     
   - [4.2 分割等和子集](algo_dynamic_pro/src/main/java/backpackproblem/SplitEqualSubSet.java)
- ```java
+ ```python
     给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
 
     定义dp数组：dp[i][j] = x表示，对于前i个物品，当前背包的容量为j时，若x为true，
     则说明可以恰好将背包装满，若x为false，则说明不能恰好将背包装满。
 ```  
-  #### [贪心类型问题]
+ - [4.3 完全背包问题](algo_dynamic_pro/src/main/java/backpackproblem/CompleteBackPackproblem.java)
+        
+ ```python
+    给定不同面额的硬币和一个总金额，写出函数计算可以凑成总金额的硬币组合,每一种面额的硬币由无限个
+    --》 转换下描述：有一个背包，最大容量为amount，有一系列物品coins，每个物品的重量为coins[i]，每个物品的数量无限。
+        请问有多少种方法，能够把背包恰好装满？
+    
+```
+  #### [5.贪心类型问题](algo_dynamic_pro/src/main/java/greedyproblem)
+        什么是贪心算法呢？贪心算法可以认为是动态规划算法的一个特例，相比动态规划，使用贪心算法需要满足更多的条件（贪心选择性质），但是效率比动态规划要高。
+        简单说就是：每一步都做出一个局部最优的选择，最终的结果就是全局最优。注意，这是一种特殊性质，其实只有一小部分问题拥有这个性质。
+        如果满足贪心选择性质，那么可以进一步降低时间复杂度，达到线性级别的。
+
+ - [5.1 Interval Scheduling（区间调度问题）](algo_dynamic_pro/src/main/java/greedyproblem/IntervalSchedulProblem.java)
+        
+        给你很多形如[start,end]的闭区间，请你设计一个算法，算出这些区间中最多有几个互不相交的区间。
+        举个例子，intvs=[[1,3],[2,4],[3,6]]，这些区间最多有两个区间互不相交，即[[1,3],[3,6]]，你的算法应该返回 2。注意边界相同并不算相交。
+        这个问题在生活中的应用广泛，比如你今天有好几个活动，每个活动都可以用区间[start,end]表示开始和结束的时间，
+        请问你今天最多能参加几个活动呢？
+        
+ - [5.2 无重叠区间](algo_dynamic_pro/src/main/java/greedyproblem/NoIntervalSchedulProblem.java)
+ 
+        给定一个区间集合,找到需要移出区间的最小数量,使得剩余区间相互不重叠
+        区间数 - 重叠区间(即5.1的计算方式) = 【需要移出区间的最小数量】
+        
   #### [其他经典问题]
 
  
