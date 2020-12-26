@@ -98,7 +98,29 @@
         给定一个区间集合,找到需要移出区间的最小数量,使得剩余区间相互不重叠
         区间数 - 重叠区间(即5.1的计算方式) = 【需要移出区间的最小数量】
         
-  #### [其他经典问题]
+ - [5.3 重叠区间个数](algo_dynamic_pro/src/main/java/greedyproblem/CountIntervalSchedulProblem.java)
+ 
+        给定一个区间集合,找到重叠子区间的个数：如少的箭头射爆气球类问题
+                             
+ - [5.4 跳跃游戏 I](algo_dynamic_pro/src/main/java/greedyproblem/JumpGameV1.java)
+ 
+        给定一个非负整数数组，你最初位于数组的第一个位置，数组中每个元素代表你在这个位置可以跳跃
+        的最大长度，判断你是否能够跳跃到最后一个位置
+        
+ - [5.5 跳跃游戏 II](algo_dynamic_pro/src/main/java/greedyproblem/JumpGameV2.java)
+  
+         给定一个非负整数数组，你最初位于数组的第一个位置，数组中每个元素代表你在这个位置可以跳跃
+         的最大长度，目标：最少跳跃次数到达最后一个位置 【前提保证一定能到达最后一个位置】
+        
+  #### [6.其他经典问题](algo_dynamic_pro/src/main/java/otherclassicpro)
+  
+  - [6.1 动态规划之正则表达式*](algo_dynamic_pro/src/main/java/otherclassicpro/RegularProblemAsterisk.java)
+  
+       给定一个字符串（s）和另一个字符模式（p）。使两者匹配 支持【*】【.】 
+
+  - [6.2 动态规划之正则表达式·](algo_dynamic_pro/src/main/java/otherclassicpro/RegularProblemAsterisk.java)
+  
+       给定一个字符串（s）和另一个字符模式（p）。使两者匹配 支持【*】【.】 
 
  
 # [algo_backtracking 回溯算法](algo_backtracking)
