@@ -18,12 +18,10 @@
         子目标金额的最优结果，然后逐渐累加拼接成最终的金额对应到最优结果
 
 #### [3.最长递增子序列长度 LIS](algo_dynamic_pro/src/main/java/mostincrsubseq) 
-```python
-/**
- *  给定一个无序的整数数组,找到其中最长的递增子序列的长度
- *   >>> tip: 注意「子序列」和「子串」这两个名词的区别，子串一定是连续的，而子序列不一定是连续的
- */
-```
+
+     给定一个无序的整数数组,找到其中最长的递增子序列的长度
+     >>> tip: 注意「子序列」和「子串」这两个名词的区别，子串一定是连续的，而子序列不一定是连续的
+
  - [dpTable模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq.java)
  - [二分查找模式](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseq4BinarySearch.java)
  - [进阶问题:最大子序和](algo_dynamic_pro/src/main/java/mostincrsubseq/MostIncrSubseqSum.java) 在得到最大自序的基础上，并将这种情况列出来
@@ -35,12 +33,11 @@
 ```
  
  ##### [3.2 最长公共子序列LCS](algo_dynamic_pro/src/main/java/mostcommsubseq/MostCommSubSeq.java) 
- ```python
-    最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
-    因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路
-    
-    相比较而言就是上面斐波那契数列解题思路的扩展，由一维数组变成二维数组
- ```
+     最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，
+     因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路
+     
+     相比较而言就是上面斐波那契数列解题思路的扩展，由一维数组变成二维数组
+
  -[变种问题:字符串的删除操作](algo_dynamic_pro/src/main/java/mostcommsubseq/LCSMinDistance.java)
     
     给定两个单词s1和s2，找到使得s1和s2相同所需的最小步数，
@@ -67,20 +64,16 @@
     转换成价值的val数组的具体比较
     
   - [4.2 分割等和子集](algo_dynamic_pro/src/main/java/backpackproblem/SplitEqualSubSet.java)
- ```python
-    给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
-
-    定义dp数组：dp[i][j] = x表示，对于前i个物品，当前背包的容量为j时，若x为true，
-    则说明可以恰好将背包装满，若x为false，则说明不能恰好将背包装满。
-```  
+        给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+        
+        定义dp数组：dp[i][j] = x表示，对于前i个物品，当前背包的容量为j时，若x为true，
+        则说明可以恰好将背包装满，若x为false，则说明不能恰好将背包装满。
  - [4.3 完全背包问题](algo_dynamic_pro/src/main/java/backpackproblem/CompleteBackPackproblem.java)
         
- ```python
-    给定不同面额的硬币和一个总金额，写出函数计算可以凑成总金额的硬币组合,每一种面额的硬币由无限个
-    --》 转换下描述：有一个背包，最大容量为amount，有一系列物品coins，每个物品的重量为coins[i]，每个物品的数量无限。
-        请问有多少种方法，能够把背包恰好装满？
-    
-```
+        给定不同面额的硬币和一个总金额，写出函数计算可以凑成总金额的硬币组合,每一种面额的硬币由无限个
+            --》 转换下描述：有一个背包，最大容量为amount，有一系列物品coins，每个物品的重量为coins[i]，每个物品的数量无限。
+            请问有多少种方法，能够把背包恰好装满？
+            
   #### [5.贪心类型问题](algo_dynamic_pro/src/main/java/greedyproblem)
         什么是贪心算法呢？贪心算法可以认为是动态规划算法的一个特例，相比动态规划，使用贪心算法需要满足更多的条件（贪心选择性质），但是效率比动态规划要高。
         简单说就是：每一步都做出一个局部最优的选择，最终的结果就是全局最优。注意，这是一种特殊性质，其实只有一小部分问题拥有这个性质。
@@ -114,30 +107,34 @@
         
   #### [6.其他经典问题](algo_dynamic_pro/src/main/java/otherclassicpro)
   
-  - [6.1 动态规划之正则表达式*](algo_dynamic_pro/src/main/java/otherclassicpro/RegularProblemAsterisk.java)
+  - [6.1 动态规划之正则表达式](algo_dynamic_pro/src/main/java/otherclassicpro/RegularProblem.java)
   
-       给定一个字符串（s）和另一个字符模式（p）。使两者匹配 支持【*】【.】 
+        给定一个字符串（s）和另一个字符模式（p）。使两者匹配 支持【*】【.】 
 
-  - [6.2 动态规划之正则表达式·](algo_dynamic_pro/src/main/java/otherclassicpro/RegularProblemAsterisk.java)
+  - [6.2 经典动态规划：高楼扔鸡蛋](algo_dynamic_pro/src/main/java/otherclassicpro/ThrowEggs.java)
   
-       给定一个字符串（s）和另一个字符模式（p）。使两者匹配 支持【*】【.】 
+        若干层楼，若干个鸡蛋，让你算出最少的尝试次数，找到鸡蛋恰好摔不碎的那层楼。
+        国内大厂以及谷歌脸书面试都经常考察这道题，
+        只不过他们觉得扔鸡蛋太浪费，改成扔杯子，扔破碗什么的 
+        
+        １》动态规划+线性搜索 可以，但是会超时
+        ２》动态规划＋二分搜索
 
  
 # [algo_backtracking 回溯算法](algo_backtracking)
 
 ####[1.全排列任意数据](algo_backtracking/src/main/java/fullarray/FullArrayMode.java)
 
-```python
-回溯算法的基本框架
+        回溯算法的基本框架
+        
+        for 选择 in 选择列表：
+            排除重复选择 --》将该选择从选择列表中排除 --》因为每次选择都是从nums的第一个元素开始
+            做选择 --》将该选择加入当前选择的路径列中
+            backtrack(选择列表,路径)
+            路径.remove(选择) --》取消选择
 
-for 选择 in 选择列表：
-    排除重复选择 --》将该选择从选择列表中排除 --》因为每次选择都是从nums的第一个元素开始
-    做选择 --》将该选择加入当前选择的路径列中
-    backtrack(选择列表,路径)
-    路径.remove(选择) --》取消选择
 
-    
-```
+
 ####[2.N皇后问题]()
 
 # [algo_data_structure 数据结构](algo_data_structure)
