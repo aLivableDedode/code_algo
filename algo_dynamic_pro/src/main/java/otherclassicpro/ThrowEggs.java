@@ -19,7 +19,14 @@ import java.util.Arrays;
  */
 public class ThrowEggs {
     public static void main(String[] args) {
-        System.out.println(throwEggs(6, 10000));
+//        System.out.println(throwEggs(6, 10000));
+        // 备忘录
+        int K = 6,N =10000;
+        int[][] memo = new int[K+1][N+1];
+        for (int[] ints : memo) {
+            Arrays.fill(ints,-1);
+        }
+        System.out.println(throwEggsBinarySearch(K, N, memo));
     }
 
     /**
@@ -62,9 +69,31 @@ public class ThrowEggs {
      * @param N
      * @return
      */
-    public static int throwEggsBinarySearch(int K,int N){
+    public static int throwEggsBinarySearch(int K,int N,int[][] memo){
 
-        return K;
+        if (K == 1 || N == 0) return N;
+
+        if (memo[K][N] != -1) return memo[K][N];
+
+        int low = 1;
+        int hight = N;
+        int res = Integer.MAX_VALUE;
+        while (low <= hight){
+            int mid = low + (hight - low) /2;
+            // 碎了
+            int broken = dp(K-1,mid-1,memo);
+            // 没碎
+            int noBroken = dp(K,N - mid,memo);
+            if (broken > noBroken){
+                hight = mid - 1;
+                res = Math.min(res,broken +1);
+            }else {
+                low = mid + 1;
+                res = Math.min(res,noBroken + 1);
+            }
+        }
+        memo[K][N] = res;
+        return memo[K][N];
     }
 
 }
