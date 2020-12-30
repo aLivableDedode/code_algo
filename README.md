@@ -119,7 +119,7 @@
         
         １》动态规划+线性搜索 可以，但是会超时
         ２》动态规划＋二分搜索
-  - [6.3 「Burst Balloon」经典动态规划：戳气球问题]()
+  - [6.3 「Burst Balloon」经典动态规划：戳气球问题](algo_dynamic_pro/src/main/java/otherclassicpro/BurstBalloonProblem.java)
         
         有n个气球，编号为0到n-1，每个气球上都标有一个数字，这些数字存在数组nums中。
         现在要求你戳破所有的气球。如果你戳破气球i，就可以获得nums[left] * nums[i] * nums[right]个硬币。 
