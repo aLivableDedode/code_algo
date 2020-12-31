@@ -131,7 +131,7 @@
         输出: 167 
         解释: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
              coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
- 
+  - [6.4 动态规划之博弈问题](algo_dynamic_pro/src/main/java/otherclassicpro/)
 # [algo_backtracking 回溯算法](algo_backtracking)
 
 ####[1.全排列任意数据](algo_backtracking/src/main/java/fullarray/FullArrayMode.java)
