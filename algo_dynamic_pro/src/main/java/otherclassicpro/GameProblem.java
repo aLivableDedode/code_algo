@@ -22,12 +22,78 @@ package otherclassicpro;
  * 想求的答案是先手和后手最终分数之差，
  * 按照这个定义也就是 dp[0][n-1].fir - dp[0][n-1].sec，
  * 即面对整个 piles，先手的最优得分和后手的最优得分之差。
+ * dp 数组的定义，状态显然有三个：开始的索引 i，结束的索引 j，当前轮到的人。
+ * --》伪代码：
+ * n = piles.lenght
+ * for 0 <= i < n:
+ *  for j < i < n:
+ *      for who in {fir,sec}:
+ *          dp[i][j][who] = max(left,right)
+ * @【left:piles[i] + dp[i+1][j].sec ==> 选择i(最左)之后，轮到对方先相当于子集变成后手】
+ * @【right:piles[j] + dp[i][j-1].sec ==> 选择j(最右)之后，轮到对方先相当于子集变成后手】
  *
+ * @另外状态转移方程:
+ * if 先手选左边 ==》left > right:
+ *  dp[i][j].sec = dp[i+1][j].fir
+ * if 先手右边 ==》left < right:
+ *  dp[i][j].sec = dp[i][j-1].fir
  *
+ * @根据dp数组的定义，我们也可以找出 base case，也就是最简单的情况：
+ * dp[i][i] = piles[i]
+ * dp[i][j].sec = 0 ==> 当i==j是只有一堆
  */
 public class GameProblem {
 
     public static void main(String[] args) {
-        
+        int[] piles = new int[]{3,9,1,2};
+        System.out.println(gameProblem(piles));
+    }
+
+    public static int gameProblem(int[] piles){
+        int n = piles.length;
+        // 初始化 dp 数组
+        Pair[][] dp = new Pair[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                dp[i][j] = new Pair(0,0);
+            }
+        }
+
+        // 填入 base case
+        for (int i = 0; i < n; i++) {
+            dp[i][i].fir = piles[i];
+            dp[i][i].sec = 0;
+        }
+
+        // 开始遍历dp 数组【斜着遍历】
+        for (int l = 2; l <= n; l++) {
+            for (int i = 0; i <= n - l; i++) {
+                int j = l + i -1;
+                int left = piles[i] + dp[i + 1][j].sec;
+                int right = piles[j] + dp[i][j - 1].sec;
+                // 状态转移
+                if (left > right){
+                    dp[i][j].fir = left;
+                    dp[i][j].sec = dp[i+1][j].fir;
+                }else {
+                    dp[i][j].fir = right;
+                    dp[i][j].sec = dp[i][j-1].fir;
+                }
+            }
+        }
+
+        Pair res = dp[0][n - 1];
+        return res.fir - res.sec;
+    }
+
+
+}
+
+class Pair{
+    int fir,sec;
+
+    public Pair(int fir, int sec) {
+        this.fir = fir;
+        this.sec = sec;
     }
 }

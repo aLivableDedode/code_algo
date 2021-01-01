@@ -131,7 +131,33 @@
         输出: 167 
         解释: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
              coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
-  - [6.4 动态规划之博弈问题](algo_dynamic_pro/src/main/java/otherclassicpro/)
+  - [6.4 动态规划之博弈问题](algo_dynamic_pro/src/main/java/otherclassicpro/GameProblem.java)
+        
+        博弈问题
+         你和你的朋友面前有一排石头堆，用一个数组 piles 表示，piles[i] 表示第 i 堆石子有多少个。
+         你们轮流拿石头，一次拿一堆，但是只能拿走最左边或者最右边的石头堆。
+         所有石头被拿完后，谁拥有的石头多，谁获胜。
+        
+        石头的堆数可以是任意正整数，石头的总数也可以是任意正整数，这样就能打破先手必胜的局面了。
+        比如有三堆石头 piles = [1,100,3]，先手不管拿 1 还是 3，
+        能够决定胜负的 100 都会被后手拿走，后手会获胜。
+        
+        【假设两人都很聪明，请你设计一个算法，返回先手和后手的最后得分（石头总数）之差。】
+        比如上面那个例子，先手能获得 4 分，后手会获得 100 分，你的算法应该返回 -96
+        
+  - [6.5 4键键盘问题](algo_dynamic_pro/src/main/java/otherclassicpro/FourkeyboardProblem.java)
+  
+        四种按键:
+        A : 在屏幕打印一个'A'
+        C-A : 选中整个屏幕
+        C-C : 复制
+        C-V : 粘贴
+        
+        假设按键可以按N次，那么屏幕最多可以显示几个'A'?
+       
+  - [6.6 团灭 LeetCode 股票买卖问题](algo_dynamic_pro/src/main/java/otherclassicpro/StockTradingProblem.java) 
+        
+        
 # [algo_backtracking 回溯算法](algo_backtracking)
 
 ####[1.全排列任意数据](algo_backtracking/src/main/java/fullarray/FullArrayMode.java)
