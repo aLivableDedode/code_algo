@@ -202,8 +202,8 @@
         如果知道某一元素的前驱和后驱，操作指针即可删除该元素或者插入新元素，时间复杂度 O(1)。
         但是正因为存储空间不连续，你无法根据一个索引算出对应元素的地址，所以不能随机访问；
         而且由于每个元素必须存储指向前后元素位置的指针，会消耗相对更多的储存空间。
-
-####[1.递归反转链表:如何拆解复杂问题](algo_data_structure/src/main/java/reverselinked)
+#### [链表系列]()
+#####[1.递归反转链表:如何拆解复杂问题](algo_data_structure/src/main/java/reverselinked)
 
    - [单链表递归反转](algo_data_structure/src/main/java/reverselinked/RecurReverseLinkedLists.java)
    - [反转链表前 N 个节点](algo_data_structure/src/main/java/reverselinked/RecurPreNLinked.java)
@@ -212,7 +212,7 @@
     递归操作链表并不高效。和迭代解法相比，虽然时间复杂度都是 O(N)，但是迭代解法的空间复杂度是 O(1)，
     而递归解法需要堆栈，空间复杂度是 O(N)。所以递归操作链表可以作为对递归算法的练习或者拿去和小伙伴装逼
     
-####[2.递归思维：k 个一组反转链表](algo_data_structure/src/main/java/reverselinked)
+#####[2.递归思维：k 个一组反转链表](algo_data_structure/src/main/java/reverselinked/ReverseKGroup.java)
 
         给出一个链表，每 k 个节点一组进行翻转，并返回翻转后的链表。
         k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，
@@ -221,3 +221,4 @@
         给定这个链表：1->2->3->4->5
         当 k = 2 时，应当返回: 2->1->4->3->5
         当 k = 3 时，应当返回: 3->2->1->4->5
+#####[3.递归思维：如何高效判断回文单链表？](algo_data_structure/src/main/java/reverselinked/ReverseKGroup.java)

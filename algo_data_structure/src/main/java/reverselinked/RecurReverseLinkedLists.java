@@ -16,10 +16,12 @@ public class RecurReverseLinkedLists {
         Utils.traverse(listNode);
         ListNode last = recurReverseLinkedLists(listNode);
         Utils.traverse(last);
+        last = reverseLinkedLists(last);
+        Utils.traverse(last);
     }
 
     /**
-     *  单链表反转
+     *  单链表反转-递归方式
      * @param head
      * @return
      */
@@ -31,5 +33,24 @@ public class RecurReverseLinkedLists {
         return last;
     }
 
+    /**
+     *  非递归方式: 反转以 a 为头结点的链表
+     * @param a
+     * @return
+     */
+    public static ListNode reverseLinkedLists(ListNode a){
+        if (a.next == null) return a;
+        ListNode pre,cur,next;
+        pre = null;
+        cur = a;
+        next = a;
+        while (cur != null) {
+            next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
 
 }
