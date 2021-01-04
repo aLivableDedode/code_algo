@@ -35,4 +35,12 @@ public class Utils {
         System.out.print(head.val+"-->");
         traverse(head.next);
     }
+
+    public static TreeNode constrDisorderBinaryTree(int nonLeafNodes){
+        int[] nums = new int[2*nonLeafNodes + 1];
+        for (int i = 1; i <= nonLeafNodes; i++) {
+
+        }
+        return null;
+    }
 }

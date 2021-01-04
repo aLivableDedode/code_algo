@@ -221,4 +221,67 @@
         给定这个链表：1->2->3->4->5
         当 k = 2 时，应当返回: 2->1->4->3->5
         当 k = 3 时，应当返回: 3->2->1->4->5
-#####[3.递归思维：如何高效判断回文单链表？](algo_data_structure/src/main/java/reverselinked/ReverseKGroup.java)
+#####[3.递归思维：如何高效判断回文单链表？](algo_data_structure/src/main/java/reverselinked/)
+
+        待定.....
+
+
+#### [二叉树Binary Tree系列](algo_data_structure/src/main/java/binarytreeseries)
+    二叉树的算法思想的运用广泛，甚至可以说，只要涉及递归，都可以抽象成二叉树的问题
+    经典算法「快速排序」和「归并排序」，对于这两个算法，你有什么理解？
+    --> 快速排序就是个二叉树的前序遍历，归并排序就是个二叉树的后续遍历
+        快速排序的逻辑是，若要对nums[lo..hi]进行排序，我们先找一个分界点p，
+        通过交换元素使得nums[lo..p-1]都小于等于nums[p]，且nums[p+1..hi]都大于nums[p]，
+        然后递归地去nums[lo..p-1]和nums[p+1..hi]中寻找新的分界点，最后整个数组就被排序了
+        快速排序的代码框架如下：
+        
+        void sort(int[] nums, int lo, int hi) {
+            /****** 前序遍历位置 ******/
+            // 通过交换元素构建分界点 p
+            int p = partition(nums, lo, hi);
+            /************************/
+        
+            sort(nums, lo, p - 1);
+            sort(nums, p + 1, hi);
+        }
+        先构造分界点，然后去左右子数组构造分界点 --> 对比二叉树的前序遍历
+     
+    --> 归并排序的逻辑，若要对nums[lo..hi]进行排序，我们先对nums[lo..mid]排序，
+        再对nums[mid+1..hi]排序，最后把这两个有序的子数组合并，整个数组就排好序
+        归并排序的代码框架如下：
+        
+        void sort(int[] nums, int lo, int hi) {
+            int mid = (lo + hi) / 2;
+            sort(nums, lo, mid);
+            sort(nums, mid + 1, hi);
+        
+            /****** 后序遍历位置 ******/
+            // 合并两个排好序的子数组
+            merge(nums, lo, mid, hi);
+            /************************/
+        }
+        先对左右子数组排序，然后合并（类似合并有序链表的逻辑） --》对比二叉树的后序遍历
+##### [pre:二叉树遍历](algo_data_structure/src/main/java/binarytreeseries)
+    /* 二叉树遍历框架 */
+    void traverse(TreeNode root) {
+        // 前序遍历
+        traverse(root.left)
+        // 中序遍历
+        traverse(root.right)
+        // 后序遍历
+    }
+##### [1.翻转二叉树]()
+##### [2.填充二叉树节点的右侧指针]()
+##### [3.将二叉树展开为链表]()
+
+
+
+#### [⼆叉堆Binary Heap系列]()
+    ⼆叉堆Binary Heap其主要操作就两个， sink （下沉）和 swim （上浮），⽤以维护⼆叉堆的性
+    质.其主要应⽤有两个，⾸先是⼀种排序⽅法「堆排序」，第⼆是⼀种很有⽤的数据结构「优先级队列」
+     
+    ⼆叉堆其实就是⼀种特殊的⼆叉树（完全⼆叉树）
+    ⼆叉堆还分为最⼤堆和最⼩堆。最⼤堆的性质是：每个节点都⼤于等于它的两个⼦节点。
+    类似的，最⼩堆的性质是：每个节点都⼩于等于它的⼦节点。
+
+##### [1.从优先级队列开始]()

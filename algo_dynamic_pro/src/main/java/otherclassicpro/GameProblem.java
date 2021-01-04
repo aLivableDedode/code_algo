@@ -29,8 +29,8 @@ package otherclassicpro;
  *  for j < i < n:
  *      for who in {fir,sec}:
  *          dp[i][j][who] = max(left,right)
- * @【left:piles[i] + dp[i+1][j].sec ==> 选择i(最左)之后，轮到对方先相当于子集变成后手】
- * @【right:piles[j] + dp[i][j-1].sec ==> 选择j(最右)之后，轮到对方先相当于子集变成后手】
+ * @【left: piles[i] + dp[i+1][j].sec ==> 选择i(最左)之后，轮到对方先相当于子集变成后手】
+ * @【right: piles[j] + dp[i][j-1].sec ==> 选择j(最右)之后，轮到对方先相当于子集变成后手】
  *
  * @另外状态转移方程:
  * if 先手选左边 ==》left > right:
