@@ -1,6 +1,9 @@
 package utils;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * @Author lvkai
@@ -9,7 +12,11 @@ import java.util.Random;
  **/
 public class Utils {
     public static void main(String[] args) {
-        traverse(constructSingly(4));
+//        traverse(constructSingly(4));
+        LinkedList<Integer> linkedList = new LinkedList<>(
+                Arrays.asList(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}));
+        TreeNode treeNode = constrBinaryTree(linkedList);
+        System.out.println(treeNode);
     }
 
     public static ListNode constructSingly(int size){
@@ -36,11 +43,18 @@ public class Utils {
         traverse(head.next);
     }
 
-    public static TreeNode constrDisorderBinaryTree(int nonLeafNodes){
-        int[] nums = new int[2*nonLeafNodes + 1];
-        for (int i = 1; i <= nonLeafNodes; i++) {
-
+    public static TreeNode constrBinaryTree(LinkedList<Integer> nodes){
+        TreeNode root = null;
+        if (nodes == null || nodes.isEmpty()) {
+            return null;
         }
-        return null;
+        Integer data = nodes.removeFirst();
+
+        if (null != data){
+            root = new TreeNode(data);
+            root.left = constrBinaryTree(nodes);
+            root.left = constrBinaryTree(nodes);
+        }
+        return root;
     }
 }
