@@ -1,8 +1,8 @@
 package utils;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Random;
+import com.sun.org.apache.bcel.internal.generic.RET;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -16,7 +16,7 @@ public class Utils {
         LinkedList<Integer> linkedList = new LinkedList<>(
                 Arrays.asList(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}));
         TreeNode treeNode = constrBinaryTree(linkedList);
-        System.out.println(treeNode);
+        System.out.println(sequencTraversal(treeNode));
     }
 
     public static ListNode constructSingly(int size){
@@ -68,5 +68,86 @@ public class Utils {
         preorderTraversal(treeNode.right);
     }
 
+    /**
+     *  层序遍历
+     * @param treeNode
+     * @return
+     */
+    public static LinkedList sequencTraversal(TreeNode treeNode){
+        if (treeNode == null) {
+            return null;
+        }
+        LinkedList nodeVals = new LinkedList();
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(treeNode);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            nodeVals.add(node.val);
+            if (null != node.left) queue.offer(node.left);
+            if (null != node.right) queue.offer(node.right);
+        }
+        return nodeVals;
+    }
 
+    /**
+     *  最大深度
+     * @param treeNode
+     * @return
+     */
+    public static int maxDepthTreeV1(TreeNode treeNode) {
+        if (treeNode == null) {
+            return 0;
+        }else {
+            return Math.max(maxDepthTreeV1(treeNode.left),maxDepthTreeV1(treeNode.right)) + 1;
+        }
+
+    }
+
+    /**
+     *  最大深度
+     * @param treeNode
+     * @return
+     */
+    public static int maxDepthTreeV2(TreeNode treeNode){
+        if (treeNode == null) {
+            return 0;
+        }
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(treeNode);
+        int res =0;
+        while (!queue.isEmpty()){
+            int size = queue.size();
+            while (size > 0){
+                TreeNode node = queue.poll();
+                if (null != node.left) queue.offer(node.left);
+                if (null != node.right) queue.offer(node.right);
+                size --;
+            }
+
+            res++;
+        }
+        return res;
+    }
+
+    /**
+     *  二叉树的层序遍历 II
+     *  给定一个二叉树，返回其节点值自底向上的层序遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+     * @param treeNode
+     * @return
+     */
+    public static LinkedList reverseSequencTraversal(TreeNode treeNode){
+        if (treeNode == null) {
+            return null;
+        }
+        LinkedList nodeVals = new LinkedList();
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(treeNode);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            nodeVals.add(node.val);
+            if (null != node.left) queue.offer(node.left);
+            if (null != node.right) queue.offer(node.right);
+        }
+        return nodeVals;
+    }
 }

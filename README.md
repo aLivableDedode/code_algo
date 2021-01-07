@@ -271,10 +271,58 @@
         // 后序遍历
     }
 ##### [1.翻转二叉树](algo_data_structure/src/main/java/binarytreeseries/FlipBinaryTree.java)
-##### [2.填充二叉树节点的右侧指针](algo_data_structure/src/main/java/binarytreeseries/FlipBinaryTree.java)
-##### [3.将二叉树展开为链表]()
+##### [2.填充二叉树节点的右侧指针](algo_data_structure/src/main/java/binarytreeseries/)
 
+        有点不懂题目意思，先不看了
+##### [3.将二叉树展开为链表](algo_data_structure/src/main/java/binarytreeseries/Tree2Linked.java)
 
+        给定一个二叉树，原地将它展开为一个单链表。
+        例如，给定二叉树
+        
+            1
+           / \
+          2   5
+         / \   \
+        3   4   6
+        
+        将其展开为：
+        1
+         \
+          2
+           \
+            3
+             \
+              4
+               \
+                5
+                 \
+                  6
+##### [4.相同的树](algo_data_structure/src/main/java/binarytreeseries/TheSameTree.java)
+
+        给定两个二叉树，编写一个函数来检验它们是否相同。
+        如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+        
+        输入:       1         1
+                  / \       / \
+                 2   3     2   3
+        
+                [1,2,3],   [1,2,3]
+        
+        输出: true
+
+##### [5.对称二叉树](algo_data_structure/src/main/java/binarytreeseries/SymmetricBinaryTree.java)
+
+        给定一个二叉树，检查它是否是镜像对称的。
+        例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
+            1
+           / \
+          2   2
+         / \ / \
+        3  4 4  3
+        
+        ==》将树分成左右两个子树 ,然后错位对比
+         
+##### [6.二叉树的最大深度](algo_data_structure/src/main/java/binarytreeseries/MaxDepthTree.java)
 
 #### [⼆叉堆Binary Heap系列]()
     ⼆叉堆Binary Heap其主要操作就两个， sink （下沉）和 swim （上浮），⽤以维护⼆叉堆的性
