@@ -53,8 +53,20 @@ public class Utils {
         if (null != data){
             root = new TreeNode(data);
             root.left = constrBinaryTree(nodes);
-            root.left = constrBinaryTree(nodes);
+            root.right = constrBinaryTree(nodes);
         }
         return root;
     }
+
+    public static void preorderTraversal(TreeNode treeNode){
+        if (treeNode == null) {
+            return;
+        }
+
+        System.out.println(treeNode.val);
+        preorderTraversal(treeNode.left);
+        preorderTraversal(treeNode.right);
+    }
+
+
 }

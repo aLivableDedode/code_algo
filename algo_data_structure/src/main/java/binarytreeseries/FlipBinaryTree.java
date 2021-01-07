@@ -1,6 +1,10 @@
 package binarytreeseries;
 
 import utils.TreeNode;
+import utils.Utils;
+
+import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * 翻转二叉树
@@ -12,6 +16,12 @@ public class FlipBinaryTree {
 
     public static void main(String[] args) {
 
+        LinkedList<Integer> linkedList = new LinkedList<>(
+                Arrays.asList(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}));
+        TreeNode treeNode = Utils.constrBinaryTree(linkedList);
+        Utils.preorderTraversal(treeNode);
+        treeNode = flipBinaryTree(treeNode);
+        Utils.preorderTraversal(treeNode);
     }
 
     public static TreeNode flipBinaryTree(TreeNode root){
