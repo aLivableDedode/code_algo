@@ -335,7 +335,7 @@
         示例 1：输入：nums = [3,2,1,6,0,5]
                输出：[6,3,5,null,2,0,null,null,1]
  
- ##### [8.从前序与中序遍历序列构造二叉树](algo_data_structure/src/main/java/binarytreeseries/ConstLargestBinTree.java)
+##### [8.从前序与中序遍历序列构造二叉树](algo_data_structure/src/main/java/binarytreeseries/ConstLargestBinTree.java)
 
         根据一棵树的前序遍历与中序遍历构造二叉树。
         注意:
@@ -344,7 +344,24 @@
         例如，给出前序遍历 preorder = [3,9,20,15,7]
                 中序遍历 inorder = [9,3,15,20,7]
         
-        
+##### [9.通过后序和中序遍历结果构造二叉树](algo_data_structure/src/main/java/binarytreeseries/ConstLargestBinTree.java)
+##### [10.寻找重复子树](algo_data_structure/src/main/java/binarytreeseries/FindDuplicateSubTree.java)
+  
+#### [⼆叉搜索树系列Binary Search Tree，后文简写 BST](algo_data_structure/src/main/java/binarysearchtree)
+    
+    特性：
+        1、对于 BST 的每一个节点node，左子树节点的值都比node的值要小，右子树节点的值都比node的值大。
+        2、对于 BST 的每一个节点node，它的左侧子树和右侧子树都是 BST。
+    它构建起了数据结构领域的半壁江山，直接基于 BST 的数据结构有 AVL 树，红黑树等等，拥有了自平衡性质，
+        可以提供 logN 级别的增删查改效率；还有 B+ 树，线段树等结构都是基于 BST 的思想来设计的。
+    从做算法题的角度来看 BST，除了它的定义，还有一个重要的性质：BST 的中序遍历结果是有序的（升序）。
+
+##### [1.寻找第 K 小的元素](algo_data_structure/src/main/java/binarysearchtree/)
+
+    给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。
+    说明：你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。
+
+
 #### [⼆叉堆Binary Heap系列]()
     ⼆叉堆Binary Heap其主要操作就两个， sink （下沉）和 swim （上浮），⽤以维护⼆叉堆的性
     质.其主要应⽤有两个，⾸先是⼀种排序⽅法「堆排序」，第⼆是⼀种很有⽤的数据结构「优先级队列」

@@ -30,11 +30,11 @@ public class ConstrBinTreePreind {
     }
 
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
-        return constrBinTreePreind(preorder,0,preorder.length -1,
+        return build(preorder,0,preorder.length -1,
                 inorder,0,inorder.length -1);
     }
 
-    public static TreeNode constrBinTreePreind(int[] preorder ,int preStart,int preEnd,
+    public static TreeNode build(int[] preorder ,int preStart,int preEnd,
                                               int[] inorder,int inorStart,int inoEnd ){
 
         if (preStart > preEnd) {
@@ -43,21 +43,23 @@ public class ConstrBinTreePreind {
 
         // 根节点
         int rootVal = preorder[preStart];
-        int limit = 0;
-        for (int i = inorStart; i < inoEnd; i++) {
+        int index = 0;
+        for (int i = inorStart; i <= inoEnd; i++) {
             if (rootVal == inorder[i]){
-                limit = i;
+                index = i;
                 break;
             }
         }
 
         // 找到左子树的区间大小 --> 限制前序/后续数组的长度
-        int leftSize = limit - inorStart;
+        int leftSize = index - inorStart;
+
         TreeNode root = new TreeNode(rootVal);
-        root.left = constrBinTreePreind(preorder,preStart + 1,preStart + leftSize,
-                    inorder, inorStart,limit -1 );
-        root.right = constrBinTreePreind(preorder,preStart + leftSize + 1,preEnd,
-                    inorder,limit + 1,inoEnd);
+
+        root.left = build(preorder,preStart + 1,preStart + leftSize,
+                            inorder, inorStart,index -1 );
+        root.right = build(preorder,preStart + leftSize + 1,preEnd,
+                            inorder,index + 1,inoEnd);
         return root;
 
     }
