@@ -324,6 +324,27 @@
          
 ##### [6.二叉树的最大深度](algo_data_structure/src/main/java/binarytreeseries/MaxDepthTree.java)
 
+##### [7.构造最大二叉树](algo_data_structure/src/main/java/binarytreeseries/ConstLargestBinTree.java)
+
+        给定一个不含重复元素的整数数组 nums 。一个以此数组直接递归构建的 最大二叉树 定义如下：
+        二叉树的根是数组 nums 中的最大元素。
+        左子树是通过数组中 最大值左边部分 递归构造出的最大二叉树。
+        右子树是通过数组中 最大值右边部分 递归构造出的最大二叉树。
+        返回有给定数组 nums 构建的 最大二叉树 。
+
+        示例 1：输入：nums = [3,2,1,6,0,5]
+               输出：[6,3,5,null,2,0,null,null,1]
+ 
+ ##### [8.从前序与中序遍历序列构造二叉树](algo_data_structure/src/main/java/binarytreeseries/ConstLargestBinTree.java)
+
+        根据一棵树的前序遍历与中序遍历构造二叉树。
+        注意:
+        你可以假设树中没有重复的元素。
+        
+        例如，给出前序遍历 preorder = [3,9,20,15,7]
+                中序遍历 inorder = [9,3,15,20,7]
+        
+        
 #### [⼆叉堆Binary Heap系列]()
     ⼆叉堆Binary Heap其主要操作就两个， sink （下沉）和 swim （上浮），⽤以维护⼆叉堆的性
     质.其主要应⽤有两个，⾸先是⼀种排序⽅法「堆排序」，第⼆是⼀种很有⽤的数据结构「优先级队列」
