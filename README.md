@@ -355,12 +355,49 @@
     它构建起了数据结构领域的半壁江山，直接基于 BST 的数据结构有 AVL 树，红黑树等等，拥有了自平衡性质，
         可以提供 logN 级别的增删查改效率；还有 B+ 树，线段树等结构都是基于 BST 的思想来设计的。
     从做算法题的角度来看 BST，除了它的定义，还有一个重要的性质：BST 的中序遍历结果是有序的（升序）。
+    ---》BST 相关的问题，要么利用 BST 左小右大的特性提升算法效率，要么利用中序遍历的特性满足题目的要求
 
-##### [1.寻找第 K 小的元素](algo_data_structure/src/main/java/binarysearchtree/)
+##### [1.寻找第 K 小的元素](algo_data_structure/src/main/java/binarysearchtree/kthSmallest.java)
 
     给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。
     说明：你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。
+    输入: root = [5,3,6,2,4,null,null,1], k = 3
+           5
+          / \
+         3   6
+        / \
+       2   4
+      /
+     1
+    输出: 3
 
+##### [2.BST 转化累加树](algo_data_structure/src/main/java/binarysearchtree/ConvertBST2Sum.java)
+
+    给出二叉 搜索 树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 node 的新值等于原树中大于或等于 node.val 的值之和。
+    提醒一下，二叉搜索树满足下列约束条件：
+        节点的左子树仅包含键 小于 节点键的节点。
+        节点的右子树仅包含键 大于 节点键的节点。
+        左右子树也必须是二叉搜索树。
+
+##### [3.判断 BST 的合法性](algo_data_structure/src/main/java/binarysearchtree/JudgingBSTLegal.java)
+
+##### [4.在BST中搜索一个数](algo_data_structure/src/main/java/binarysearchtree/FindXBST.java)
+##### [5.在BST中插入一个数](algo_data_structure/src/main/java/binarysearchtree/InsertXBST.java)
+##### [6.在BST中删除一个数](algo_data_structure/src/main/java/binarysearchtree/DeleteXBST.java)
+##### [7.用Git来讲讲二叉树最近公共祖先](algo_data_structure/src/main/java/binarysearchtree/DeleteXBST.java)
+
+    给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+    百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，
+        满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。
+    
+    输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+    输出: 3
+    解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
+    
+    输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+    输出: 5
+    解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点本身。
+##### [8.完全二叉树的节点个数](algo_data_structure/src/main/java/binarysearchtree/NumsNodeCompeletBinTree.java)
 
 #### [⼆叉堆Binary Heap系列]()
     ⼆叉堆Binary Heap其主要操作就两个， sink （下沉）和 swim （上浮），⽤以维护⼆叉堆的性
