@@ -408,6 +408,16 @@
     类似的，最⼩堆的性质是：每个节点都⼩于等于它的⼦节点。
 
 ##### [1.从优先级队列开始]()
+##### [2.数据流的中位数](algo_data_structure/src/main/java/binaryheap/MedianDataStream.java)
+    
+    中位数是有序列表中间的数。如果列表长度是偶数，中位数则是中间两个数的平均值。
+    例如，
+    [2,3,4] 的中位数是 3
+    [2,3] 的中位数是 (2 + 3) / 2 = 2.5
+    设计一个支持以下两种操作的数据结构：
+    void addNum(int num) - 从数据流中添加一个整数到数据结构中。
+    double findMedian() - 返回目前所有元素的中位数。
+    链接：https://leetcode-cn.com/problems/find-median-from-data-stream
 
 #### [LRU缓存机制](algo_data_structure/src/main/java/lru)
     
@@ -422,3 +432,5 @@
 #### [LFU缓存机制](algo_data_structure/src/main/java/lfu/LFUCache.java)
 
     LFU 算法相当于是淘汰访问频次最低的数据，如果访问频次最低的数据有多条，需要淘汰最旧的数据。把数据按照访问频次进行排序，而且频次还会不断变化
+    
+    
