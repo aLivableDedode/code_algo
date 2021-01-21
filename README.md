@@ -433,4 +433,19 @@
 
     LFU 算法相当于是淘汰访问频次最低的数据，如果访问频次最低的数据有多条，需要淘汰最旧的数据。把数据按照访问频次进行排序，而且频次还会不断变化
     
+#### [单调栈](algo_data_structure/src/main/java/monotonicstack)
     
+    单调栈实际上就是栈，只是利用了一些巧妙的逻辑，使得每次新元素入栈后，栈内的元素都保持有序（单调递增或单调递减）。
+##### [1.下一个更大元素 I](algo_data_structure/src/main/java/monotonicstack/NextGreaterNumber.java)
+
+    给你一个数组，返回一个等长的数组，对应索引存储着下一个更大元素，如果没有更大的元素，就存 -1
+    比如说，输入一个数组nums = [2,1,2,4,3]，你返回数组[4,2,4,-1,-1]。
+##### [2.一月有多少天](algo_data_structure/src/main/java/monotonicstack/DailyTemperatures.java)
+
+    给你一个数组T，这个数组存放的是近几天的天气气温，你返回一个等长的数组，
+    计算：对于每一天，你还要至少等多少天才能等到一个更暖和的气温；如果等不到那一天，填 0。
+    
+##### [3.如何处理环形数组](algo_data_structure/src/main/java/monotonicstack/CircularArray.java)
+
+    比如输入一个数组[2,1,2,4,3]，你返回数组[4,2,4,-1,4]。
+    拥有了环形属性，最后一个元素 3 绕了一圈后找到了比自己大的元素 4。
