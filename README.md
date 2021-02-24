@@ -454,3 +454,6 @@
     
     一个「队列」，只是使用了一点巧妙的方法，使得队列中的元素全都是单调递增（或递减）的
 
+##### [1.滑动窗口最大值](algo_data_structure/src/main/java/monotonicqueue/MaxSlidingWindow.java)
+    
+    给你输入一个数组nums和一个正整数k，有一个大小为k的窗口在nums上从左至右滑动，请你输出每次窗口中k个元素的最大值。

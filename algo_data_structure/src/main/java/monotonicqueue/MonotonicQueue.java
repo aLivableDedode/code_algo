@@ -8,6 +8,7 @@ import java.util.LinkedList;
  *
  *  1.在队尾添加元素，并且把之前小于自己的元素删除
  *  2.在队头删除删除元素
+ *  3.最大值即尾队首元素！！
  */
 public class MonotonicQueue {
     private LinkedList<Integer> q  = new LinkedList<>();
@@ -25,6 +26,12 @@ public class MonotonicQueue {
 
     public Integer max(){
         return q.getFirst();
+    }
+
+    public void pop(int n){
+        if (q.getFirst() == n){
+            q.pollFirst();
+        }
     }
 
 }
