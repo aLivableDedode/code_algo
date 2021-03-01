@@ -457,3 +457,9 @@
 ##### [1.滑动窗口最大值](algo_data_structure/src/main/java/monotonicqueue/MaxSlidingWindow.java)
     
     给你输入一个数组nums和一个正整数k，有一个大小为k的窗口在nums上从左至右滑动，请你输出每次窗口中k个元素的最大值。
+   
+##### [2.详解二叉堆，实现优先级队列](algo_data_structure/src/main/java/monotonicqueue/PriorityQueueByBinHeap.java)
+
+    二叉堆（Binary Heap）没什么神秘，性质比二叉搜索树 BST 还简单。
+    其主要操作就两个，sink（下沉）和swim（上浮），用以维护二叉堆的性质。
+    其主要应用有两个，首先是一种排序方法「堆排序」，第二是一种很有用的数据结构「优先级队列」
