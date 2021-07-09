@@ -18,6 +18,10 @@ public class RecurReverseLinkedLists {
         Utils.traverse(last);
         last = reverseLinkedLists(last);
         Utils.traverse(last);
+
+        last = revese(last);
+        Utils.traverse(last);
+
     }
 
     /**
@@ -43,13 +47,51 @@ public class RecurReverseLinkedLists {
         ListNode pre,cur,next;
         pre = null;
         cur = a;
-        next = a;
         while (cur != null) {
             next = cur.next;
             cur.next = pre;
             pre = cur;
             cur = next;
         }
+        return pre;
+    }
+
+
+    public static ListNode resuReves(ListNode head){
+        if (head.next == null) return head;
+
+        ListNode lastNode = resuReves(head.next);
+
+        head.next.next = head;
+        head.next = null;
+
+        return lastNode;
+    }
+
+    public static ListNode resuReves1(ListNode head){
+        if (head.next == null) return  head;
+
+        ListNode listNode = resuReves1(head.next);
+        head.next.next = head;
+        head.next = null;
+        return listNode;
+    }
+
+    public static ListNode revese(ListNode head){
+        if (head.next == null) return head;
+        ListNode pre = null,cur,next;
+        cur = head;
+        while (cur != null){
+
+            // 完成赋值操作
+            next = cur.next;
+            cur.next = pre;
+            pre = cur;
+
+            // 完成 下一个 的转移
+            cur = next;
+        }
+
         return pre;
     }
 
